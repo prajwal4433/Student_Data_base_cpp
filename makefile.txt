@@ -1,0 +1,18 @@
+out: main.o student.o file_operations.o menu_operations.o
+	g++ main.o student.o file_operations.o menu_operations.o -o out
+
+main.o: main.cpp
+	g++ -c main.cpp
+
+student.o: student.cpp
+	g++ -c student.cpp
+
+file_operations.o: file_operations.cpp
+	g++ -c file_operations.cpp
+
+menu_operations.o: menu_operations.cpp
+	g++ -c menu_operations.cpp
+
+clean:
+	rm -f *.o out
+
